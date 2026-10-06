@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>QR Code Generator</h1>
+      <p class="subtitle">Enter a link and generate a QR code that opens the exact same link when scanned.</p>
+
+      <form id="qrForm">
+        <label for="urlInput">Enter URL</label>
+        <div class="input-row">
+          <input
+            id="urlInput"
+            type="url"
+            placeholder="https://example.com"
+            autocomplete="url"
+            required
+          />
+          <button type="submit">Generate QR</button>
+        </div>
+        <p id="error" class="error"></p>
+      </form>
+
+      <div id="result" class="result hidden">
+        <div class="qr-wrapper">
+          <img id="qrImage" alt="Generated QR code" />
+        </div>
+        <p class="scan-text">Scan this QR code to open:</p>
+        <a id="linkPreview" class="link-preview" target="_blank" rel="noopener noreferrer"></a>
+
+        <div class="actions">
+          <button id="downloadBtn" type="button">Download QR</button>
+          <button id="copyBtn" type="button" class="secondary">Copy Link</button>
+        </div>
+        <p id="status" class="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- QRCode.js generates the QR locally in the browser. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

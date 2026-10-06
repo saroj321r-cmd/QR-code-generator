@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f5f7ff, #eef2ff);
+  color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 620px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 18px 60px rgba(20, 30, 80, 0.12);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #666;
+  line-height: 1.5;
+  margin: 0 auto 30px;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #d5d5d5;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  background: #635bff;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.96);
+}
+
+button.secondary {
+  background: #eeeeF5;
+  color: #333;
+}
+
+.error {
+  min-height: 20px;
+  margin: 8px 0 0;
+  color: #d93025;
+  text-align: left;
+  font-size: 13px;
+}
+
+.result {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #eee;
+}
+
+.hidden {
+  display: none;
+}
+
+.qr-wrapper {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.qr-wrapper img,
+.qr-wrapper canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.scan-text {
+  color: #666;
+  margin: 10px 0 6px;
+}
+
+.link-preview {
+  display: block;
+  color: #635bff;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.status {
+  min-height: 20px;
+  color: #238636;
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
